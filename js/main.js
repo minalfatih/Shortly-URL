@@ -20,7 +20,7 @@ document.querySelector(".short-btn").onclick = function(e) {
       headers: {
         'accept': 'application/json',
         'Content-Type': 'application/json',
-        'authorization': 'pk_brgNuaqbS3F6f5CK'
+        'authorization': 'pk_5tQcYlSiEmEnYmO1'
       },
       body: JSON.stringify(data)
     }) .then(function(response) {
