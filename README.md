@@ -25,8 +25,8 @@ let's short your long link 🔗, This website to short any long link like youtub
 
 ### Links
 
-- Solution URL: [Repo link](https://your-solution-url.com)
-- Live Site URL: [Live link](https://your-live-site-url.com)
+- Solution URL: [Repo link](https://github.com/minalfatih/Shortly-URL/tree/main)
+- Live Site URL: [Live link](https://minalfatih.github.io/Shortly-URL/)
 
 
 ## My process
