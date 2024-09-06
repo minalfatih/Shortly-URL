@@ -1,0 +1,317 @@
+:root {
+  --Cyan: hsl(180, 66%, 49%);
+  --Dark-Violet: hsl(257, 27%, 26%);
+  --Red: hsl(0, 87%, 67%);
+  --Gray: hsl(0, 0%, 75%);
+  --Grayish-Violet: hsl(257, 7%, 63%);
+  --Very-Dark-Blue: hsl(255, 11%, 22%);
+  --Very-Dark-Violet: hsl(260, 8%, 14%);
+}
+.navbar .nav-item .nav-link {
+  color: var(--Grayish-Violet);
+}
+.navbar .nav-item .nav-link:hover {
+  color: var(--Very-Dark-Violet);
+  transition: 0.3s linear;
+}
+#special {
+  background-color: var(--Cyan);
+  color: white;
+  width: fit-content;
+  padding: 10px 25px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+#special::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255 255 255 / 50%);
+  width: 0;
+  height: 100%;
+}
+#special:hover::after {
+  width: 100%;
+  transition: 0.3s linear;
+}
+@media (max-width: 990px) {
+  .navbar-collapse {
+    background-color: var(--Dark-Violet);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .navbar .navbar-nav {
+    padding: 15px;
+  }
+  .navbar .navbar-nav:last-child {
+    border-top: 1px solid hsl(257deg 7% 63% / 20%);
+  }
+  .navbar .navbar-nav:last-child li:last-child a {
+    width: 100% !important;
+  }
+  .navbar .nav-item .nav-link {
+    color: white;
+    padding: 15px;
+  }
+  .navbar .nav-item .nav-link:hover {
+    color: var(--Cyan);
+  }
+}
+.title h1 {
+  color: var(--Very-Dark-Blue);
+  font-size: 4rem;
+  font-weight: bold;
+}
+.title p {
+  color: var(--Grayish-Violet);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.landing .title p {
+  width: 75%;
+}
+@media (max-width: 990px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  .landing .title p {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .landing .image img {
+    max-width: 115%;
+    height: auto;
+    position: relative;
+    left: 40px;
+  }
+}
+.short {
+  position: relative;
+}
+.short::after {
+  content: "";
+  position: absolute;
+  top: 110px;
+  left: 0;
+  background-color: hsl(225deg 33.33% 95.29%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.short .row {
+  background-color: var(--Dark-Violet);
+  background-image: url(../images/bg-shorten-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.short .box {
+  position: relative;
+}
+.short .box .error-mesg {
+  display: none;
+  color: var(--Red);
+  font-style: italic;
+  margin: 5px 0 0 0;
+  position: relative;
+}
+@media (min-width: 991px) {
+  .short .box .error-mesg {
+    position: absolute;
+  }
+}
+.short .box .error-mesg.active {
+  display: block;
+}
+.short input[type="text"] {
+  border: 0;
+  outline: none;
+  color: var(--Dark-Violet);
+  caret-color: var(--Cyan);
+}
+.short input[type="text"].active {
+  border: 3px solid var(--Red);
+}
+.short input[type="text"] {
+  outline: none;
+  color: var(--Dark-Violet);
+  caret-color: var(--Cyan);
+}
+.short .short-btn {
+  width: 180px !important;
+}
+.short .box-link {
+  background-color: hsl(225deg 33.33% 95.29%);
+  min-height: 100px;
+  padding: 7px 0 50px;
+}
+.short .box-link .box {
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px 30px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.short .box-link .box .link-name {
+  color: var(--Very-Dark-Violet);
+  font-size: 18px;
+  margin: 0;
+}
+.short .box-link .box .copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+@media (max-width: 767px) {
+  .short .box-link .box .copy {
+    align-items: flex-start;
+  }
+}
+.short .box-link .box .copy .link {
+  color: var(--Cyan);
+  font-size: 18px;
+}
+.short .box-link .box .copy button {
+  border-radius: 6px !important;
+  border: 0;
+  width: 110px !important;
+}
+.short .box-link .box .copy button.copied {
+  background-color: var(--Dark-Violet) !important;
+}
+@media (max-width: 767px) {
+  .short .row {
+    background-image: url(../images/bg-shorten-mobile.svg);
+    background-size: 70% 120px;
+    background-position: right top;
+  }
+  .short .short-btn {
+    width: 100% !important;
+  }
+  .short .box-link .box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .short .box-link .box .link-name {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .short .box-link .box .copy {
+    width: 100%;
+    border-top: 1px solid var(--Gray);
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .short .box-link .box .copy button {
+    width: 100% !important;
+  }
+}
+.statistics {
+  background-color: hsl(225deg 33.33% 95.29%);
+  padding-bottom: 100px;
+}
+.statistics .title:first-child {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .statistics .title:first-child {
+    width: 100%;
+  }
+}
+.statistic-boxs {
+  position: relative;
+}
+.statistic-boxs::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: var(--Cyan);
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+}
+.statistic-boxs .box {
+  width: 100%;
+  padding: 50px 30px 40px;
+  z-index: 10;
+}
+.statistic-boxs .box:nth-child(2) {
+  margin-top: 80px;
+}
+.statistic-boxs .box:last-child {
+  margin-top: 160px;
+}
+.statistic-boxs .box .image {
+  background-color: var(--Dark-Violet);
+  width: fit-content;
+  top: -50px;
+  left: 20%;
+  transform: translate(-50%);
+}
+@media (max-width: 990px) {
+  .statistic-boxs::after {
+    width: 10px;
+    height: 90%;
+    top: 25px;
+    left: 50%;
+  }
+  .statistic-boxs .box {
+    margin-top: 70px !important;
+  }
+  .statistic-boxs .box .image {
+    left: 50%;
+  }
+}
+.boot {
+  background-color: var(--Dark-Violet);
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 260px;
+}
+@media (max-width: 576px) {
+  .boot {
+    height: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .boot {
+    background-image: url(../images/bg-boost-mobile.svg);
+    background-size: contain;
+    background-position: right;
+  }
+}
+footer {
+  background-color: var(--Very-Dark-Violet);
+}
+footer ul li a {
+  color: var(--Gray);
+}
+footer ul li a:hover {
+  color: var(--Cyan);
+  transition: 0.3s linear;
+}
+.social a {
+  text-decoration: none;
+}
+.social a:hover svg path {
+  fill: var(--Cyan);
+  transition: 0.3s linear;
+}
+.attribution {
+  transform: translate(-50%);
+  color: var(--Gray);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Cyan);
+}
